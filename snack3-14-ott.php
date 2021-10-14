@@ -30,37 +30,21 @@
 
 
 
-<?php foreach ($db as $key => $value) { ?>
 
-    <?php if($key == 'teachers'){ ?>
+<div style='background-color : lightgray'>
+    <ul>
+        <?php foreach ($db['teachers'] as $key) { ?>
+            <li><?php echo $key['name'] . $key['lastname']?></li>
+        <?php } ?>
+    </ul>
+</div>
 
-        <div style="background-color: gray">
+<div style='background-color : lime'>
 
-            <?php foreach ($value as $key) { ?>
+    <ul>
+        <?php foreach ($db['pm'] as $key) { ?>
+            <li><?php echo $key['name'] . $key['lastname']?></li>
+        <?php } ?>
+    </ul>
 
-                <p><?php echo $key["name"] . ' ' . $key["lastname"]  ?></p>
-                
-            <?php } ?>
-
-        </div>
-
-    <?php } elseif ($key == 'pm') { ?>
-
-        <div style="background-color: green">
-    
-            <?php foreach ($value as $key) { ?>
-                
-                <p><?php echo $key["name"] . ' ' . $key["lastname"]  ?></p>
-                
-            <?php } ?>
-
-        </div>
-
-    <?php } ?>
-
-<?php } ?>
-<ul>
-    <?php foreach ($db['teachers'] as $key) { ?>
-        <li><?php echo $key['name'] . $key['lastname']?></li>
-    <?php } ?>
-</ul>
+</div>

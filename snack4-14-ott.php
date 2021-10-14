@@ -72,7 +72,4 @@ $class41 = [
     <?php } ?>
 </ul>
 
-<?php foreach ($class41 as $key ) { ?>
 
-
-<?php } ?>
